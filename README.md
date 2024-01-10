@@ -1,3 +1,14 @@
+# Laryssa's Web Development Portfolio Site
+
+Hi! Welcome to my website. I wanted a easy way to share a little bit about myself and the work that I do. Here you will find a little bit about me and my background and some examples of my work. 
+I hope for this to be a place that I can share small snippets of code that I'm working on as well. 
+
+I've used create-react-app to get up and running quickly and based my design on the sites of Donielle Berg and Brittany Chiang.
+
+# Tech Stack
+- React
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
