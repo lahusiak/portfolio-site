@@ -1,12 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './header/header';
+import AboutSection from './section/about';
+import Section from './section/section';
 
 function App() {
   return (
     <div className="App">
-      <header>Laryssa Husiak</header>
-      <main>Welcome</main>
-    </div>
+        <Header/>
+        {/* on mobile 100% width, on desktop 70% */}
+        <main className="main">
+          <AboutSection />
+          <Section />
+        </main>
+      </div>
   );
 }
 

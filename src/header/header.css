@@ -1,0 +1,97 @@
+
+
+.header {
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    top: 0;
+    --main-header-color: #f54e42;
+    background-color: var(--main-header-color);
+    color: white;
+    font-size: 1.5rem;
+
+  }
+  
+  .header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+  }
+  
+  .main {
+    width: 100%;
+    margin: 1rem;
+  }
+  
+  .header__tagline {
+    display: none;
+  }
+  
+  .header__navBtn {
+    width: 50px;
+    height: 50px;
+    padding-block: 0px;
+    padding-inline: 0px;
+    border: none;
+    background-color:var(--main-header-color);
+    cursor: pointer;
+  }
+  
+  .header__navBtn svg {
+    fill: #ffffff;
+  }
+  
+  
+  /* Tablet and above  */
+  @media (min-width: 768px) {
+    /* Styles for tablets and larger */
+    .App {
+      display: flex;
+    }
+  
+    .header__container {
+      display: block;
+    }
+  
+    .header {
+      font-size: 1.5rem;
+      padding: 1.25rem;
+      width: 30%;
+      background-color: initial;
+    }
+    
+    .header__title {
+      background-color: var(--main-header-color);
+      padding-top: 0;
+      padding-left: .5rem;
+    }
+  
+    .header__tagline {
+      display: block;
+      background-color: initial;
+      color: #000000;
+      font-size: 1rem;
+      padding-left: .5rem;
+    }
+  
+    .header__tagline--desc {
+      font-style: italic;
+    }
+    
+    .header__navBtn {
+      display: none;
+    }
+  
+    .main {
+      font-size: 1rem;
+      margin: 1rem;
+      width: 70%;
+    }
+    .section__about {
+      margin-top: 2.5rem;
+    }
+  }
+  
+  
+  

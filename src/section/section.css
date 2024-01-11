@@ -1,0 +1,10 @@
+.section__about {
+    margin-top: 2.5rem;
+}
+
+/* temporary styling to test sticky */
+.section__container {
+    height: 1000px;
+    width: 200px;
+    background-color: aqua;
+}
