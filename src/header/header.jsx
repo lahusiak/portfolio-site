@@ -6,7 +6,7 @@ function Header () {
             <section className="header__container">
                 <h1 className="header__title">Laryssa Husiak</h1>
                 <div className="header__tagline">
-                    <p className="header__tagline--title">Accessibility Specialist and Senior Frontend Engineer</p>
+                    <p className="header__tagline--title">Accessibility Specialist & Senior Frontend Engineer</p>
                     <p className="header__tagline--desc">tag line</p>
                 </div>
                 <button className="header__navBtn">

@@ -20,8 +20,7 @@
   }
   
   .main {
-    width: 100%;
-    margin: 1rem;
+    width: auto;
   }
   
   .header__tagline {
