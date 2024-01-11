@@ -2,9 +2,7 @@
     margin-top: 2.5rem;
 }
 
-/* temporary styling to test sticky */
 .section__container {
-    height: 1000px;
     width: 100%;
 }
 
@@ -25,5 +23,17 @@
 
 .section__heading--title {
     text-transform: uppercase;
+}
+
+.section__list {
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.section__list--item-title {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
 }
 

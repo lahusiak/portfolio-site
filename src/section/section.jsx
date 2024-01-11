@@ -1,13 +1,55 @@
 import "./section.css";
 import SectionHeading from "./heading";
 
-function Section() {
+
+const DATA = [
+    {
+        heading: "Experience",
+        items: [
+            {
+                dateStart: "2020",
+                dateEnd: "2023",
+                jobTitle: "Accessibility Lead",
+                company: "BuzzFeed",
+                jobDescription: "Brief narrative of my role"
+            }
+        ]    
+    }
+]
+
+// TODO: Add section styling for projects and anything else
+// TODO: Maybe add About heading here instead
+function SectionContent({ sections }) {
     return (
-        <section className="section__container">
-            <SectionHeading />
-            <p>There will be multiple sections here.</p>
-        </section>
-    )
-}
+      <>
+        {sections.map((section) => {
+          const { heading, items } = section;
+          return (
+            <section key={heading} className="section__container">
+              <SectionHeading heading={heading} />
+              <ul className="section__list">
+              {items.map((item, index) => (
+                heading === "Experience" && (
+                  <li key={index}>
+                    <div>{item.dateStart}-{item.dateEnd}</div>
+                    <h3 className="section__list--item-title">
+                      <div>{item.jobTitle}</div>
+                      <div>{item.company}</div>
+                    </h3>
+                    <p>{item.jobDescription}</p>
+                  </li>
+                )
+              ))}
+              </ul>
+            </section>
+          );
+        })}
+      </>
+    );
+  }
+  
+  function Section() {
+    return <SectionContent sections={DATA} />;
+  }
 
 export default Section;
