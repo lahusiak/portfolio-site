@@ -12,8 +12,48 @@ const DATA = [
                 jobTitle: "Accessibility Lead",
                 company: "BuzzFeed",
                 jobDescription: "Brief narrative of my role"
+            },
+            {
+                dateStart: "2020",
+                dateEnd: "2023",
+                jobTitle: "Accessibility Lead",
+                company: "BuzzFeed",
+                jobDescription: "Brief narrative of my role"
+            },
+            {
+                dateStart: "2020",
+                dateEnd: "2023",
+                jobTitle: "Accessibility Lead",
+                company: "BuzzFeed",
+                jobDescription: "Brief narrative of my role"
             }
         ]    
+    }, 
+    {
+        heading: "Projects",
+        items: [
+            {
+                dateStart: "2020",
+                dateEnd: "2023",
+                jobTitle: "Accessibility Lead",
+                company: "BuzzFeed",
+                jobDescription: "Brief narrative of my role"
+            },
+            {
+                dateStart: "2020",
+                dateEnd: "2023",
+                jobTitle: "Accessibility Lead",
+                company: "BuzzFeed",
+                jobDescription: "Brief narrative of my role"
+            },
+            {
+                dateStart: "2020",
+                dateEnd: "2023",
+                jobTitle: "Accessibility Lead",
+                company: "BuzzFeed",
+                jobDescription: "Brief narrative of my role"
+            }
+        ]
     }
 ]
 
@@ -24,12 +64,13 @@ function SectionContent({ sections }) {
       <>
         {sections.map((section) => {
           const { heading, items } = section;
+          const formattedHeading = heading.toLowerCase();
           return (
-            <section key={heading} className="section__container">
+            <section aria-labelledby={formattedHeading} tabIndex={-1} key={heading} className="section__container">
               <SectionHeading heading={heading} />
               <ul className="section__list">
               {items.map((item, index) => (
-                heading === "Experience" && (
+                (heading === "Experience" || heading === "Projects") && (
                   <li key={index}>
                     <div>{item.dateStart}-{item.dateEnd}</div>
                     <h3 className="section__list--item-title">

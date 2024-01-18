@@ -5,8 +5,8 @@
     height: 100%;
     position: sticky;
     top: 0;
-    --main-header-color: #f54e42;
-    background-color: var(--main-header-color);
+    /* --main-header-color: #f54e42;
+    background-color: var(--main-header-color); */
     color: white;
     font-size: 1.5rem;
 
@@ -16,14 +16,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 1rem;
+    margin: 0;
+    --main-header-color: #f54e42;
+    background-color: var(--main-header-color);
+    width: 100%;
+  }
+
+  .header__title {
+    margin-left: .5rem;
   }
   
-  .main {
-    width: auto;
-    margin: 1rem;
-  }
-  
+
   .header__tagline {
     display: none;
   }
@@ -36,40 +39,86 @@
     border: none;
     background-color:var(--main-header-color);
     cursor: pointer;
+    margin-right: .5rem;;
   }
   
   .header__navBtn svg {
     fill: #ffffff;
   }
-  
-  
-  /* Tablet and above  */
-  @media (min-width: 768px) {
-    /* Styles for tablets and larger */
-    .App {
-      display: flex;
+
+  .nav__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1rem;
+
+    li {
+        padding: .25rem;
     }
-  
+
+}
+
+.nav__links-link {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: .25rem;
+
+    &:hover, &:focus {
+        background-color: #f54e42;
+        color: #ffffff;
+    }
+}
+
+.nav__submenu--desktop {
+    display: none;
+    .nav__links {
+        display: none;
+    }
+}
+
+.nav__submenu--mobile {
+    display: none;
+
+    &.open {
+        display: block;
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        width: 40%;
+        margin-left: auto;
+        text-align: right;
+        border: #000 1px solid;
+        background-color: #ffffff;
+    }
+}
+
+
+/* Styles for tablets and larger */
+  @media (min-width: 768px) {
+
+    .header {
+        font-size: 1.5rem;
+        padding: 1.25rem;
+        width: 30%;
+        background-color: initial;
+    }
+
     .header__container {
       display: block;
-    }
-  
-    .header {
-      font-size: 1.5rem;
-      padding: 1.25rem;
-      width: 30%;
-      background-color: initial;
+      background-color: #ffffff;
     }
     
     .header__title {
       background-color: var(--main-header-color);
-      padding-top: 0;
+      margin: 0;
+      padding: 0;
       padding-left: .5rem;
     }
   
     .header__tagline {
       display: block;
-      background-color: initial;
       color: #000000;
       font-size: 1rem;
       padding-left: .5rem;
@@ -83,13 +132,25 @@
       display: none;
     }
   
-    .main {
-      font-size: 1rem;
-      width: 70%;
-    }
     .section__about {
       margin-top: 2.5rem;
     }
+
+    .nav__submenu--desktop {
+        display: block;
+        .nav__links {
+            display: block;
+        }
+
+    }
+
+    .nav__submenu--mobile {
+        display: none;
+        &.open {
+            display: none;
+        }
+    }
+
   }
   
   

@@ -6,8 +6,8 @@ import Section from './section/section';
 function App() {
   return (
     <div className="App">
-        <Header/>
-        {/* on mobile 100% width, on desktop 70% */}
+          <Header/>
+          {/* on mobile 100% width, on desktop 70% */}
         <main className="main">
           <AboutSection />
           <Section />

@@ -14,7 +14,7 @@
     border-top: 1px solid #000;
     display: block;
     flex-grow: 1;
-    height: 1px;
+    height: 0px;
     margin: 2em 0;
     outline: none;
     padding: 0;
@@ -22,6 +22,7 @@
 }
 
 .section__heading--title {
+    /* scroll-margin-top: 3.125rem; */
     text-transform: uppercase;
 }
 
